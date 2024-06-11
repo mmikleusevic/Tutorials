@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1041864555}
+  cameraOffset: {x: 0, y: 5, z: -7}
 --- !u!1001 &630782300
 PrefabInstance:
   m_ObjectHideFlags: 0
