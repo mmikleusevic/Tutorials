@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 20f;
 
-    void Update()
+    private void Update()
     {
         // Move the vehicle forward
 
