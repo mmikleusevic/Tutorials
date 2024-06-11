@@ -3,13 +3,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 20f;
-    [SerializeField] private float turnSpeed = 2f;
+    [SerializeField] private float turnSpeed = 10f;
+    
+    private float horizontalInput;
+    private float verticalInput;
 
     private void Update()
     {
-        // Move the vehicle forward
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
     }
 }
