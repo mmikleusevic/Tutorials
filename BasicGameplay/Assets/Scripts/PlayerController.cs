@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 
     private float horizontalInput;
 
-    void Update()
+    private void Update()
     {
         if (transform.position.x < -xRange)
         {
