@@ -3,15 +3,18 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] animalPrefabs;
-    private int animalIndex = 0;
+    [SerializeField] private float spawnRangeX = 20;
+    [SerializeField] private float spawnPosZ = 20;
+
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            GameObject animalPrefab = animalPrefabs[animalIndex];
+            int animalIndex = Random.Range(0, animalPrefabs.Length);
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
 
-            Instantiate(animalPrefab, new Vector3(0, 0, 20), animalPrefab.transform.rotation);
+            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
         }
     }
 }
