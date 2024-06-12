@@ -5,14 +5,12 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject[] animalPrefabs;
     [SerializeField] private float spawnRangeX = 20;
     [SerializeField] private float spawnPosZ = 20;
+    [SerializeField] private float startDelay = 2f;
+    [SerializeField] private float spawnInterval = 1.5f;
 
-
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SpawnRandomAnimal();
-        }
+        InvokeRepeating(nameof(SpawnRandomAnimal), startDelay, spawnInterval);
     }
 
     private void SpawnRandomAnimal()
