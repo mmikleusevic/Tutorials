@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class RepeatBackground : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Vector3 startPos;
+
     void Start()
     {
-        
+        startPos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.x < startPos.x - 50)
+        {
+            transform.position = startPos;
+        }
     }
 }
