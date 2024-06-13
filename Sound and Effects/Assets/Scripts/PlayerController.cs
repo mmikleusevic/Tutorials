@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityModifier;
 
     private Rigidbody playerRb;
+    private Animator playerAnimator;
     private bool isOnGround = true;
     public bool gameOver = false;
 
     private void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<Animator>();
         Physics.gravity *= gravityModifier;
     }
 
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+            playerAnimator.SetTrigger("Jump_trig");
         }
     }
 
@@ -35,7 +38,6 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(OBSTACLE))
         {
-            Debug.Log("Game Over");
             gameOver = true;
         }
     }
