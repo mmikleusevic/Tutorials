@@ -436,6 +436,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 2525821811400449929, guid: df952d6b26cf3c042b074985eb2d406a, type: 3}
+  startDelay: 2
+  repeatRate: 2
 --- !u!4 &1704652597
 Transform:
   m_ObjectHideFlags: 0
