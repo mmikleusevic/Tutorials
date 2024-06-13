@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRb;
+    private static string GROUND = "Ground";
+    private static string OBSTACLE = "Obstacle";
+
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravityModifier;
 
+    private Rigidbody playerRb;
     private bool isOnGround = true;
+    private bool gameOver = false;
 
     private void Start()
     {
@@ -25,6 +29,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
+        if (collision.gameObject.CompareTag(GROUND))
+        {
+            isOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag(OBSTACLE))
+        {
+            Debug.Log("Game Over");
+            gameOver = true;
+        }
     }
 }
