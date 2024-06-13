@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravityModifier;
     [SerializeField] private ParticleSystem explosionParticle;
+    [SerializeField] private ParticleSystem dirtParticle;
 
     private Rigidbody playerRb;
     private Animator playerAnimator;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
         {
+            dirtParticle.Stop();
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
             playerAnimator.SetTrigger("Jump_trig");
@@ -36,10 +38,12 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(GROUND))
         {
+            dirtParticle.Play();
             isOnGround = true;
         }
         else if (collision.gameObject.CompareTag(OBSTACLE))
         {
+            dirtParticle.Stop();
             explosionParticle.Play();
             gameOver = true;
             playerAnimator.SetBool("Death_b", true);
