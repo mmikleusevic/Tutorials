@@ -499,6 +499,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -507,6 +515,11 @@ PrefabInstance:
 --- !u!4 &896208761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3303195482613169217, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
+  m_PrefabInstance: {fileID: 896208760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &896208762 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
   m_PrefabInstance: {fileID: 896208760}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704652595
@@ -682,6 +695,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 1919463953210473908, guid: 9f9f7a981328df7488cbf234a68dc2cd, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 896208762}
     - target: {fileID: 6903027417664017002, guid: 9f9f7a981328df7488cbf234a68dc2cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
