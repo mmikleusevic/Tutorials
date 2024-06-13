@@ -12,7 +12,7 @@ public class MoveLeft : MonoBehaviour
 
     private void Start()
     {
-        playerController = GameObject.FindWithTag(PLAYER).GetComponent<PlayerController>();    
+        playerController = GameObject.FindWithTag(PLAYER).GetComponent<PlayerController>();
     }
 
     private void Update()

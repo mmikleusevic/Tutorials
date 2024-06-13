@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnManagerX : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class SpawnManagerX : MonoBehaviour
     }
 
     // Spawn obstacles
-    void SpawnObjects ()
+    void SpawnObjects()
     {
         // Set random spawn location and random object index
         Vector3 spawnLocation = new Vector3(30, Random.Range(5, 15), 0);
