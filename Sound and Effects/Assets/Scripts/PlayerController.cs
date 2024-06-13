@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRb;
     private bool isOnGround = true;
-    private bool gameOver = false;
+    public bool gameOver = false;
 
     private void Start()
     {
