@@ -14,11 +14,14 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
+        Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+    }
+
+    private Vector3 GenerateSpawnPosition()
+    {
         float spawnPositionX = Random.Range(-spawnRange, spawnRange);
         float spawnPositionZ = Random.Range(-spawnRange, spawnRange);
 
-        Vector3 randomPosition = new Vector3(spawnPositionX, 0, spawnPositionZ);
-
-        Instantiate(enemyPrefab, randomPosition, enemyPrefab.transform.rotation);
+        return new Vector3(spawnPositionX, 0, spawnPositionZ);
     }
 }
