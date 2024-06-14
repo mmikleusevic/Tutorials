@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -15,6 +16,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        enemyRb.AddForce((player.transform.position - transform.position).normalized * Time.deltaTime * speed);
+        Vector3 lookDirection = (player.transform.position - transform.position).normalized;
+
+        enemyRb.AddForce(lookDirection * Time.deltaTime * speed);
     }
 }
