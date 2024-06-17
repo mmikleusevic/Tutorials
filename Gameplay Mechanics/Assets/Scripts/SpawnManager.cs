@@ -8,13 +8,16 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float spawnRange = 9f;
 
     private void Start()
-    {
-        InvokeRepeating(nameof(SpawnEnemy), delay, repeatTime);
+    {        
+        SpawnEnemyWave();      
     }
 
-    private void SpawnEnemy()
+    private void SpawnEnemyWave()
     {
-        Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+        }
     }
 
     private Vector3 GenerateSpawnPosition()
