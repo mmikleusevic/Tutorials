@@ -6,13 +6,14 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float delay = 2f;
     [SerializeField] private float repeatTime = 8f;
     [SerializeField] private float spawnRange = 9f;
+    [SerializeField] private int waveNumber = 1;
+
 
     public int enemyCount;
 
     private void Start()
     {
-        enemyCount = 3;
-        SpawnEnemyWave(enemyCount);      
+        SpawnEnemyWave(waveNumber);      
     }
 
     private void Update()
@@ -21,7 +22,7 @@ public class SpawnManager : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            SpawnEnemyWave(1);
+            SpawnEnemyWave(waveNumber++);
         }
     }
 
