@@ -7,9 +7,22 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float repeatTime = 8f;
     [SerializeField] private float spawnRange = 9f;
 
+    public int enemyCount;
+
     private void Start()
-    {        
-        SpawnEnemyWave(3);      
+    {
+        enemyCount = 3;
+        SpawnEnemyWave(enemyCount);      
+    }
+
+    private void Update()
+    {
+        enemyCount = FindObjectsOfType<Enemy>().Length;
+
+        if (enemyCount == 0)
+        {
+            SpawnEnemyWave(1);
+        }
     }
 
     private void SpawnEnemyWave(int enemiesToSpawn)
