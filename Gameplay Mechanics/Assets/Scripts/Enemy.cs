@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float speed = 250;
+    [SerializeField] private float bonusSpeed = 100f;
 
     private Rigidbody enemyRb;
     private GameObject player;
