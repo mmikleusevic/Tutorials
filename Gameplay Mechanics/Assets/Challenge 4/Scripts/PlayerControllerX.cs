@@ -61,12 +61,10 @@ public class PlayerControllerX : MonoBehaviour
 
             if (hasPowerup) // if have powerup hit enemy with powerup force
             {
-                Debug.Log("a");
                 enemyRb.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
             }
             else // if no powerup, hit enemy with normal strength 
             {
-                Debug.Log("b");
                 enemyRb.AddForce(awayFromPlayer * normalStrength, ForceMode.Impulse);
             }
         }

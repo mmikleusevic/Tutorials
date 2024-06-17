@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -20,7 +19,7 @@ public class Enemy : MonoBehaviour
 
         enemyRb.AddForce(lookDirection * Time.deltaTime * speed);
 
-        if (transform.position.y < -10)
+        if (transform.position.z > 10)
         {
             Destroy(gameObject);
         }
