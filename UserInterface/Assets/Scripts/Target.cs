@@ -10,6 +10,7 @@ public class Target : MonoBehaviour
     private float xRange = 4;
     private float yRange = -2;
 
+    [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private int pointValue;
 
     private void Awake()
@@ -28,6 +29,7 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         Destroy(gameObject);
         gameManager.UpdateScore(pointValue);
     }
