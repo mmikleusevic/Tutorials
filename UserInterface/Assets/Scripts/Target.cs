@@ -10,6 +10,8 @@ public class Target : MonoBehaviour
     private float xRange = 4;
     private float yRange = -2;
 
+    [SerializeField] private int pointValue;
+
     private void Awake()
     {
         targetRb = GetComponent<Rigidbody>();
@@ -27,13 +29,12 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
-        gameManager.UpdateScore(5);
+        gameManager.UpdateScore(pointValue);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        gameManager.UpdateScore(-5);
     }
 
     private Vector3 RandomForce()
