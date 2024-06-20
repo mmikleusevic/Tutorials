@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI gameOverText;
     [SerializeField] private Button replayButton;
+    [SerializeField] private GameObject titleScreen;
 
     private int score;
     private float spawnRate = 1f;
@@ -43,12 +44,14 @@ public class GameManager : MonoBehaviour
     public void ReplayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        gameOverText.gameObject.SetActive(false);
-        replayButton.gameObject.SetActive(false);
+
+        titleScreen.gameObject.SetActive(true);
     }
 
     public void StartGame()
     {
+        titleScreen.gameObject.SetActive(false);
+
         isGameActive = true;
         score = 0;
 
