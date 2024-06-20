@@ -16,15 +16,6 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 1f;
     public bool isGameActive;
 
-    private void Start()
-    {
-        isGameActive = true;
-
-        StartCoroutine(SpawnTarget());
-        score = 0;
-        UpdateScore(score);
-    }
-
     private IEnumerator SpawnTarget()
     {
         while (isGameActive)
@@ -54,5 +45,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gameOverText.gameObject.SetActive(false);
         replayButton.gameObject.SetActive(false);
+    }
+
+    public void StartGame()
+    {
+        isGameActive = true;
+        score = 0;
+
+        StartCoroutine(SpawnTarget());
+        UpdateScore(score);
     }
 }
