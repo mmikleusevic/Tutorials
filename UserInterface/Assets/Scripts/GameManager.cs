@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(SpawnTarget());
         score = 0;
-        scoreText.text = "Score: " + score;
+        UpdateScore(score);
     }
 
     private IEnumerator SpawnTarget()
@@ -26,6 +26,14 @@ public class GameManager : MonoBehaviour
 
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
+
+            UpdateScore(5);
         }
+    }
+
+    private void UpdateScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        scoreText.text = "Score: " + score;
     }
 }
