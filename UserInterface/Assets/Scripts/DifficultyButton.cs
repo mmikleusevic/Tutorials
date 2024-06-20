@@ -6,6 +6,8 @@ public class DifficultyButton : MonoBehaviour
     private Button difficultyButton;
     private GameManager gameManager;
 
+    public int difficulty;
+
     private void Awake()
     {
         difficultyButton = GetComponent<Button>();
@@ -15,6 +17,6 @@ public class DifficultyButton : MonoBehaviour
 
     private void SetDifficulty()
     {
-        gameManager.StartGame();
+        gameManager.StartGame(difficulty);
     }
 }
