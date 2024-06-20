@@ -7,7 +7,7 @@ public class Target : MonoBehaviour
     private float maxSpeed = 16f;
     private float maxTorque = 10f;
     private float xRange = 4;
-    private float yRange = -6;
+    private float yRange = -2;
 
     private void Awake()
     {
@@ -20,6 +20,16 @@ public class Target : MonoBehaviour
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
 
         transform.position = RandomSpawnPosition();
+    }
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
     }
 
     private Vector3 RandomForce()
