@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    private GameManager gameManager;
     private Rigidbody targetRb;
     private float minSpeed = 12f;
     private float maxSpeed = 16f;
@@ -12,6 +13,7 @@ public class Target : MonoBehaviour
     private void Awake()
     {
         targetRb = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Start()
@@ -25,11 +27,13 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(5);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(-5);
     }
 
     private Vector3 RandomForce()
