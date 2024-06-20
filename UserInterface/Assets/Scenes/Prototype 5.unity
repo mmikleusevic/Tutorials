@@ -481,6 +481,7 @@ MonoBehaviour:
   - {fileID: 8123724620711264760, guid: e2bd2650622021747aec03197973ccb4, type: 3}
   scoreText: {fileID: 778697667}
   gameOverText: {fileID: 2080953726}
+  replayButton: {fileID: 1944465433}
   isGameActive: 0
 --- !u!4 &746815667
 Transform:
@@ -1122,7 +1123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1944465432
 RectTransform:
   m_ObjectHideFlags: 0

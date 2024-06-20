@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> targets;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI gameOverText;
+    [SerializeField] private Button replayButton;
 
     private int score;
     private float spawnRate = 1f;
@@ -44,11 +45,14 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
+        replayButton.gameObject.SetActive(true);
         isGameActive = false;
     }
 
     public void ReplayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameOverText.gameObject.SetActive(false);
+        replayButton.gameObject.SetActive(false);
     }
 }
