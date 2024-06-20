@@ -11,9 +11,12 @@ public class GameManager : MonoBehaviour
 
     private int score;
     private float spawnRate = 1f;
+    public bool isGameActive;
 
     private void Start()
     {
+        isGameActive = true;
+
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(score);
@@ -21,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnTarget()
     {
-        while (true)
+        while (isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
 
@@ -39,5 +42,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
+        isGameActive = false;
     }
 }
