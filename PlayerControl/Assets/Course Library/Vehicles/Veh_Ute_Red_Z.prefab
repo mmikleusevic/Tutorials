@@ -710,7 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6791ae26dbb72449ec9635fea9f02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horsePower: 1000000
+  horsePower: 20000
   turnSpeed: 70
   playerMovement:
     m_Name: Player Movement
@@ -762,6 +762,13 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   centerOfMass: {fileID: 3558179509442791606}
+  speedometerText: {fileID: 0}
+  rpmText: {fileID: 0}
+  wheelColliders:
+  - {fileID: 185459391044287166}
+  - {fileID: 1427151352231724626}
+  - {fileID: 8928475881048466891}
+  - {fileID: 6535359504094003397}
 --- !u!54 &1672432092933337131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -770,7 +777,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178130}
   serializedVersion: 4
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -877,7 +884,7 @@ Transform:
   m_GameObject: {fileID: 3558179509442791606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
