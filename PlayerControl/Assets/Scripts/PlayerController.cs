@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 20f;
+    [SerializeField] private readonly float speed = 20f;
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private InputAction playerMovement;
     

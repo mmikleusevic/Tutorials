@@ -7,7 +7,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] private Vector3 cameraOffset;
     [SerializeField] private Vector3[] cameraOffsets;
     [SerializeField] private PlayerController playerController;
-    private int offsetIndex = 0;
+    [SerializeField] private int offsetIndex = 0;
 
     private void Start()
     {
