@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6791ae26dbb72449ec9635fea9f02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  horsePower: 1000000
   turnSpeed: 70
   playerMovement:
     m_Name: Player Movement
@@ -1452,6 +1452,7 @@ MonoBehaviour:
   - {x: 0, y: 5, z: -7}
   - {x: -0.522, y: 1.834, z: 0.726}
   playerController: {fileID: 1041864560}
+  offsetIndex: 0
 --- !u!1001 &561020843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2749,6 +2750,7 @@ MonoBehaviour:
   - {x: 0, y: 5, z: -7}
   - {x: -0.522, y: 1.834, z: 0.726}
   playerController: {fileID: 531792747}
+  offsetIndex: 0
 --- !u!20 &1039577582
 Camera:
   m_ObjectHideFlags: 0
@@ -2832,7 +2834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6791ae26dbb72449ec9635fea9f02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  horsePower: 1000000
   turnSpeed: 70
   playerMovement:
     m_Name: Player Movement
