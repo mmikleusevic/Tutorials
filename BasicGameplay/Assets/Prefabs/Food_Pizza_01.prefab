@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8103829765094968122}
   - component: {fileID: 1641335661177392430}
   - component: {fileID: 3831281603335114517}
-  - component: {fileID: 5077621624623600843}
   - component: {fileID: 5246726500666076704}
   - component: {fileID: 3506284252592598274}
+  - component: {fileID: 7201700455448401138}
   m_Layer: 0
   m_Name: Food_Pizza_01
   m_TagString: Untagged
@@ -100,20 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
---- !u!114 &5077621624623600843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2261172400164731120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7a302a331ae594cb30499a4615e488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBound: 30
-  lowerBound: -10
 --- !u!65 &5246726500666076704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -162,3 +148,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7201700455448401138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261172400164731120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c52ee72091692143869a36cdefe1fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
