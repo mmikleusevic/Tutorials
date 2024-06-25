@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float horsePower = 20f;
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private InputAction playerMovement;
+    [SerializeField] private GameObject centerOfMass;
 
     private Rigidbody rb;
     private float horizontalInput;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = centerOfMass.transform.position;
     }
 
     private void FixedUpdate()
