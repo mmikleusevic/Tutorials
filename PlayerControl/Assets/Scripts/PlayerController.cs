@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private Vector2 moveDirection;
 
-    private void Update()
+    private void FixedUpdate()
     {
         moveDirection = playerMovement.ReadValue<Vector2>();
 
