@@ -1,31 +1,35 @@
 ﻿using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class CongratScript : MonoBehaviour
 {
     public TextMesh Text;
     public ParticleSystem SparksParticles;
-    
+
     private List<string> TextToDisplay;
-    
-    private float RotatingSpeed;
+
+    [SerializeField] private float RotatingSpeed = 5f;
     private float TimeToNextText;
 
     private int CurrentText;
-    
+
+    private void Awake()
+    {
+        TextToDisplay = new List<string>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         TimeToNextText = 0.0f;
         CurrentText = 0;
-        
-        RotatingSpeed = 1.0f;
 
-        TextToDisplay.Add("Congratulation");
+        TextToDisplay.Add("Congratulations");
         TextToDisplay.Add("All Errors Fixed");
 
         Text.text = TextToDisplay[0];
-        
+
         SparksParticles.Play();
     }
 
@@ -33,6 +37,8 @@ public class CongratScript : MonoBehaviour
     void Update()
     {
         TimeToNextText += Time.deltaTime;
+
+        Text.transform.Rotate(Vector3.back * Time.deltaTime * RotatingSpeed, Space.World);
 
         if (TimeToNextText > 1.5f)
         {
@@ -42,10 +48,9 @@ public class CongratScript : MonoBehaviour
             if (CurrentText >= TextToDisplay.Count)
             {
                 CurrentText = 0;
-
-
-                Text.text = TextToDisplay[CurrentText];
             }
+
+            Text.text = TextToDisplay[CurrentText];
         }
     }
 }
