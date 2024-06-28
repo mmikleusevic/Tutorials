@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// INHERITANCE
 public abstract class Animal : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed = 5f;
@@ -8,6 +9,7 @@ public abstract class Animal : MonoBehaviour
     protected Rigidbody rb;
     protected float distanceToGround = 1f;
 
+    // ENCAPSULATION
     protected virtual string Name { get; set; }
 
     private void Awake()
@@ -15,10 +17,14 @@ public abstract class Animal : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    // POLYMORPHYSM
     protected abstract void Move();
+    // POLYMORPHYSM
     protected abstract void Jump();
+    // POLYMORPHYSM
     protected abstract void Talk();
 
+    // ABSTRACTION
     protected virtual bool IsGrounded()
     {
         Debug.DrawRay(transform.position, Vector3.down * distanceToGround, Color.red, 10f);
