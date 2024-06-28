@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class Cat : Animal
 {
-    protected override string Name 
-    { 
+    protected override string Name
+    {
         get => base.Name;
-        set 
+        set
         {
             if (string.IsNullOrEmpty(value) && value.Length < 10)
             {
                 Name = value;
-                return;               
+                return;
             }
 
             Debug.LogError("Name is too long for cat!");
-        }        
+        }
     }
 
     private void Update()
