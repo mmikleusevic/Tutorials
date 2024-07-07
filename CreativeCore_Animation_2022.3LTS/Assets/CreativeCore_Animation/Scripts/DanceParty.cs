@@ -34,17 +34,17 @@ public class DanceParty : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            anim.SetTrigger("Dance_04");
+            anim.SetTrigger("ChaseLeft");
         }
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            anim.SetTrigger("Dance_05");
+            anim.SetTrigger("ChaseRight");
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            anim.SetTrigger("Dance_06");
+            anim.SetTrigger("Attack");
         }
     }
 }
