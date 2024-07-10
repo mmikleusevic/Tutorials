@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +7,9 @@ public class FootstepManager : MonoBehaviour
     public List<AudioClip> grassSteps = new List<AudioClip>();
     public List<AudioClip> waterSteps = new List<AudioClip>();
     public List<AudioClip> caveSteps = new List<AudioClip>();
+    public List<AudioClip> concreteSteps = new List<AudioClip>();
 
-    private enum Surface { grass, water, cave};
+    private enum Surface { grass, water, cave, concrete};
     private Surface surface;
 
     private List<AudioClip> currentList;
@@ -25,7 +25,7 @@ public class FootstepManager : MonoBehaviour
     {
         if(currentList == null)
             return;
-        
+
         AudioClip clip = currentList[Random.Range(0, currentList.Count)];
         source.PlayOneShot(clip);
     }
@@ -43,6 +43,9 @@ public class FootstepManager : MonoBehaviour
             case Surface.cave:
                 currentList = caveSteps;
                 break;
+            case Surface.concrete:
+                currentList = concreteSteps;
+                break;
             default:
                 currentList = null;
                 break;
@@ -54,6 +57,11 @@ public class FootstepManager : MonoBehaviour
         if (hit.transform.tag == "Grass")
         {
             surface = Surface.grass;
+        }
+
+        if (hit.transform.tag == "Concrete")
+        {
+            surface = Surface.concrete;
         }
 
         if (hit.transform.tag == "Water")
