@@ -24,7 +24,7 @@ public partial struct SpawnSystem : ISystem
         foreach (var entity in instances)
         {
             var transform = SystemAPI.GetComponentRW<LocalTransform>(entity);
-            transform.ValueRW.Position = random.NextFloat3(new float3(random.NextFloat(0,10), random.NextFloat(0, 10), random.NextFloat(0, 10)));
+            transform.ValueRW.Position = random.NextFloat3(new float3(random.NextFloat(0, 10), random.NextFloat(0, 10), random.NextFloat(0, 10)));
         }
     }
 }

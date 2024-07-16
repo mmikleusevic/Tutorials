@@ -1,5 +1,5 @@
-using Unity.Entities;
 using Unity.Burst;
+using Unity.Entities;
 using Unity.Transforms;
 
 public partial struct CubeRotationSystem : ISystem
