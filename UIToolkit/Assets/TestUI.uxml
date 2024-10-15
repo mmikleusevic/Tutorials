@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Style.uss?fileID=7433441132597879392&amp;guid=bf2fd0fd33cc0ad48996a3c0734bbfa2&amp;type=3#Style" />
+    <ui:VisualElement class="red_square" style="flex-grow: 0;" />
+    <ui:VisualElement class="blue_bigger_square" style="flex-grow: 0;" />
+    <ui:VisualElement class="blue_bigger_square" />
+    <ui:ProgressBar value="22" title="my-progress" />
+</ui:UXML>
