@@ -19,3 +19,33 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
+.panel_info {
+    flex-grow: 1;
+    flex-basis: 100%;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    align-items: center;
+    justify-content: space-around;
+    align-self: auto;
+    margin-bottom: 5px;
+}
+
+.label {
+    color: rgb(255, 255, 255);
+}
+
+.buttonInfo {
+    background-color: rgb(57, 67, 84);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+}
