@@ -1,0 +1,21 @@
+.panel_badge {
+    background-color: rgba(200, 199, 199, 0.67);
+    flex-basis: 100%;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-left-color: rgba(0, 0, 0, 0.5);
+    border-right-color: rgba(0, 0, 0, 0.5);
+    border-top-color: rgba(0, 0, 0, 0.5);
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+
+.panel {
+    background-color: rgba(65, 80, 82, 0.5);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}

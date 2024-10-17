@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/SytleCourseProject.uss?fileID=7433441132597879392&amp;guid=10d35137d0470424e94e02c77cbed4ba&amp;type=3#SytleCourseProject" />
+    <ui:VisualElement name="mainContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Images/Background.jpg?fileID=2800000&amp;guid=53aa8645ac81eb74aa1c597ab93cc6ae&amp;type=3#Background&quot;); opacity: 1; transition-property: all; transition-duration: 0s; transition-timing-function: ease; transition-delay: 0s;">
+        <ui:VisualElement name="topContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 80%;">
+            <ui:VisualElement name="topLeft" style="flex-grow: 0; flex-basis: 20%; align-self: auto; justify-content: flex-end; margin-right: 10%;">
+                <ui:VisualElement name="panelMiniFraction" class="panel" style="flex-grow: 0; margin-top: 20px; margin-right: 0; margin-bottom: 10px; margin-left: 20px; padding-top: 40px; padding-bottom: 0; padding-left: 0; flex-basis: auto; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;" />
+                <ui:VisualElement name="panelCharacter" class="panel" style="flex-grow: 0; flex-basis: 80%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="topMiddle" style="flex-grow: 0; flex-basis: 60%; flex-direction: row; align-items: flex-end; justify-content: flex-start; align-self: auto;">
+                <ui:VisualElement name="panelFraction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
+                <ui:VisualElement name="panelBadges" style="flex-grow: 1; width: 10%; height: 80%; margin-right: 5px;">
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-top-right-radius: 20px;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-bottom-right-radius: 20px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="panelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 5px;" />
+                <ui:VisualElement name="panelInfo" class="panel" style="flex-grow: 1; width: 20%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0;">
+                    <ui:VisualElement class="panel" style="flex-grow: 1; flex-basis: 100%; border-top-left-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-basis: 100%;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-basis: 100%; border-bottom-left-radius: 0; border-top-right-radius: 0; border-top-left-radius: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 20%;" />
+    </ui:VisualElement>
+</ui:UXML>
