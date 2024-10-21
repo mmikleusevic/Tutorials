@@ -1,4 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="TemplateMiddleBadge" src="project://database/Assets/Templates/TemplateMiddleBadge.uxml?fileID=9197481963319205126&amp;guid=de3e7e4e177ba7f46a50ef6c77eb67fb&amp;type=3#TemplateMiddleBadge" />
+    <ui:Template name="middleBadgeUp" src="project://database/Assets/Templates/middleBadgeUp.uxml?fileID=9197481963319205126&amp;guid=ea8bf6f925cc9d2498415fadd6a4a701&amp;type=3#middleBadgeUp" />
     <Style src="project://database/Assets/SytleCourseProject.uss?fileID=7433441132597879392&amp;guid=10d35137d0470424e94e02c77cbed4ba&amp;type=3#SytleCourseProject" />
     <ui:VisualElement name="mainContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Images/Background.jpg?fileID=2800000&amp;guid=53aa8645ac81eb74aa1c597ab93cc6ae&amp;type=3#Background&quot;); opacity: 1; transition-property: all; transition-duration: 0s; transition-timing-function: ease; transition-delay: 0s;">
         <ui:VisualElement name="topContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 80%;">
@@ -16,12 +18,24 @@
             <ui:VisualElement name="topMiddle" style="flex-grow: 0; flex-basis: 60%; flex-direction: row; align-items: flex-end; justify-content: flex-start; align-self: auto;">
                 <ui:VisualElement name="panelFraction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
                 <ui:VisualElement name="panelBadges" style="flex-grow: 1; width: 10%; height: 80%; margin-right: 5px;">
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-top-right-radius: 20px;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-bottom-right-radius: 20px;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-top-right-radius: 20px;">
+                        <ui:Instance template="TemplateMiddleBadge" name="TemplateMiddleBadge" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="TemplateMiddleBadge" name="TemplateMiddleBadge" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="TemplateMiddleBadge" name="TemplateMiddleBadge" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="middleBadgeUp" name="middleBadgeUp" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="middleBadgeUp" name="middleBadgeUp" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-bottom-right-radius: 20px;">
+                        <ui:Instance template="middleBadgeUp" name="middleBadgeUp" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="panelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 5px;" />
                 <ui:VisualElement name="panelInfo" class="panel" style="flex-grow: 1; width: 20%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0; background-color: rgba(65, 80, 82, 0); justify-content: space-between; align-self: auto; align-items: stretch;">
