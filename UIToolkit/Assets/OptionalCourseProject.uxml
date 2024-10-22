@@ -42,7 +42,25 @@
                         <ui:Instance template="middleBadgeUp" name="middleBadgeUp" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="panelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 5px;" />
+                <ui:VisualElement name="panelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 5px;">
+                    <ui:VisualElement name="panelListTop" style="flex-grow: 1;" />
+                    <ui:VisualElement name="listContainer" style="flex-grow: 1; flex-basis: auto; height: 45%;">
+                        <ui:ListView name="list" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="detailContainer" style="flex-grow: 1; flex-direction: row;">
+                        <ui:VisualElement name="detailFraction" style="flex-grow: 1; align-self: center; align-items: center;">
+                            <ui:VisualElement name="detailing" style="flex-grow: 0; width: 50px; height: 50px; background-image: none; -unity-background-scale-mode: scale-to-fit; justify-content: flex-start;" />
+                            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="detailName" style="color: rgb(255, 255, 255); font-size: 20px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="detailNumbers" style="flex-grow: 1; justify-content: center;">
+                            <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: stretch; justify-content: flex-start;">
+                                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="detailsScore" style="color: rgb(255, 255, 255); font-size: 18px;" />
+                                <ui:VisualElement name="detailsScoreImg" style="flex-grow: 0; width: 20px; height: 20px; align-self: center; justify-content: space-around; align-items: stretch;" />
+                            </ui:VisualElement>
+                            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="detailsReward" style="-unity-text-align: middle-left; color: rgb(255, 255, 255);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
                 <ui:VisualElement name="panelInfo" class="panel" style="flex-grow: 1; width: 20%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0; background-color: rgba(65, 80, 82, 0); justify-content: space-between; align-self: auto; align-items: stretch;">
                     <ui:VisualElement class="panel panel_info" style="margin-bottom: 10px;">
                         <ui:Label tabindex="-1" text="ERA GOAL" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" style="padding-bottom: 10px;" />

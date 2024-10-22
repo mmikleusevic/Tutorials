@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="listItem" style="flex-grow: 0; height: 30px; justify-content: space-between; flex-direction: row;">
+        <ui:VisualElement name="fractionIcon" style="flex-grow: 0; align-self: auto; justify-content: center; align-items: stretch; flex-shrink: 0; width: 30px; height: 30px; margin-right: 10px; background-image: resource(&apos;Images/fractionBadge&apos;);" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="listItemName" style="justify-content: flex-start; align-items: center; align-self: auto; flex-direction: column; width: auto; background-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255);" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="score" style="justify-content: flex-start; align-items: stretch; align-self: auto; flex-shrink: 0; width: auto; color: rgb(255, 255, 255);" />
+        <ui:VisualElement name="otherIcon" style="flex-grow: 0; flex-shrink: 0; width: 30px; height: 30px; background-image: resource(&apos;Images/helmet&apos;);" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="reward" style="width: auto; color: rgb(255, 255, 255);" />
+    </ui:VisualElement>
+</ui:UXML>
