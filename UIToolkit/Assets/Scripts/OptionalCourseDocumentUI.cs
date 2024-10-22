@@ -1,8 +1,11 @@
+using Assets.Scripts;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class OptionalCourseDocumentUI : MonoBehaviour
 {
+    [SerializeField] private List<Fraction> fractions;
     VisualElement root;
 
     private void OnEnable()
@@ -10,6 +13,8 @@ public class OptionalCourseDocumentUI : MonoBehaviour
         root = GetComponent<UIDocument>().rootVisualElement;
 
         InitializeBadges();
+
+        new DropdownController(root, fractions);
     }
 
     private void InitializeBadges()

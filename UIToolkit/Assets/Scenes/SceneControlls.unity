@@ -275,6 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbdb712182a7df4fad616cc4f3cc4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fractions:
+  - {fileID: 11400000, guid: b119e4c8999000f4a91b008d9043c63f, type: 2}
+  - {fileID: 11400000, guid: 5f451fde32e6edd44a3b90e134f3d5fa, type: 2}
+  - {fileID: 11400000, guid: c1388fe2c343c694ca46fa614c6d3138, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

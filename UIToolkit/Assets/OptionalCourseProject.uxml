@@ -13,10 +13,15 @@
                         <ui:Label tabindex="-1" text="12000 BCE" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="panelCharacter" class="panel" style="flex-grow: 0; flex-basis: 80%;" />
+                <ui:VisualElement name="panelCharacter" class="panel" style="flex-grow: 0; flex-basis: 80%;">
+                    <ui:VisualElement name="character" style="flex-grow: 1; align-items: center; justify-content: flex-end;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="topMiddle" style="flex-grow: 0; flex-basis: 60%; flex-direction: row; align-items: flex-end; justify-content: flex-start; align-self: auto;">
-                <ui:VisualElement name="panelFraction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
+                <ui:VisualElement name="panelFraction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="fractionName" style="top: 70%; align-items: center; justify-content: center; align-self: auto; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="fractionMotto" style="top: 70%; align-items: center; justify-content: center; align-self: auto; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
                 <ui:VisualElement name="panelBadges" style="flex-grow: 1; width: 10%; height: 80%; margin-right: 5px;">
                     <ui:VisualElement class="panel_badge" style="flex-grow: 1; border-top-right-radius: 20px;">
                         <ui:Instance template="TemplateMiddleBadge" name="TemplateMiddleBadge" style="flex-grow: 1;" />
@@ -42,10 +47,10 @@
                     <ui:VisualElement class="panel panel_info" style="margin-bottom: 10px;">
                         <ui:Label tabindex="-1" text="ERA GOAL" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" style="padding-bottom: 10px;" />
                         <ui:Label tabindex="-1" text="Collect 7 Stars by fullfilling goals related to the Era Stars." parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" style="padding-bottom: 10px; font-size: 10px; white-space: normal; -unity-text-align: upper-center;" />
-                        <ui:Button text="SHOW DEEDS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button" class="buttonInfo" style="align-self: center; width: 100px; height: 20px; color: rgb(255, 255, 255);" />
+                        <ui:Button text="SHOW CULTURES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button" class="buttonInfo" style="align-self: center; width: 100px; height: 20px; color: rgb(255, 255, 255);" />
                     </ui:VisualElement>
                     <ui:VisualElement class="panel_info" style="flex-grow: 1; flex-basis: 100%; align-items: center; justify-content: space-around; align-self: center; margin-bottom: 5px; background-color: rgba(65, 80, 82, 0.5);">
-                        <ui:Label tabindex="-1" text="ERA GOAL" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" style="padding-bottom: 10px;" />
+                        <ui:Label tabindex="-1" text="COMPETITIVE DEEDS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" style="padding-bottom: 10px;" />
                         <ui:Label tabindex="-1" text="Collect 7 Stars by fullfilling goals related to the Era Stars." parse-escape-sequences="true" display-tooltip-when-elided="true" class="label" style="padding-bottom: 10px; font-size: 10px; white-space: normal; -unity-text-align: upper-center;" />
                         <ui:Button text="SHOW DEEDS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="buttonInfo" style="align-self: center; width: 100px; height: 20px; color: rgb(255, 255, 255);" />
                     </ui:VisualElement>
@@ -53,6 +58,8 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 20%;" />
+        <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 20%;">
+            <ui:VisualElement name="dropdownContainer" style="flex-grow: 0; flex-basis: 20%; width: auto;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
