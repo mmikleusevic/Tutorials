@@ -78,8 +78,17 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 20%;">
+        <ui:VisualElement name="bottomContainer" style="flex-grow: 1; flex-direction: row; flex-basis: 20%; align-self: auto; justify-content: space-between;">
             <ui:VisualElement name="dropdownContainer" style="flex-grow: 0; flex-basis: 20%; width: auto;" />
+            <ui:VisualElement style="flex-grow: 0; align-self: flex-end; flex-shrink: 0; height: 100%; width: 20%; justify-content: space-around; -unity-text-align: upper-right; align-items: stretch;">
+                <ui:VisualElement style="flex-grow: 0; justify-content: flex-start; align-items: stretch; height: 80%; width: 40%; align-self: center; -unity-text-align: upper-center; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; flex-direction: row;">
+                    <ui:VisualElement name="multiElem" style="flex-grow: 0; flex-shrink: 0; width: 50%; height: 100%; border-top-right-radius: 0; border-top-left-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+                        <ui:VisualElement name="tooltip2" tooltip="This is Tooltip 2" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=1169890249420208065&amp;guid=23036d2672200814e836a6923e0e0b99&amp;type=3#arrow-up&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                        <ui:VisualElement name="tooltip3" tooltip="This is Tooltip 3" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=4154780841294389669&amp;guid=23036d2672200814e836a6923e0e0b99&amp;type=3#arrow-down&quot;); -unity-background-scale-mode: scale-to-fit; justify-content: space-around; align-items: stretch;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tooltip1" tooltip="This is Tooltip  1" style="flex-grow: 0; flex-shrink: 0; width: 50%; height: 100%; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4521532143779581420&amp;guid=23036d2672200814e836a6923e0e0b99&amp;type=3#arrow-right&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

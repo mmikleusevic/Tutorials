@@ -18,6 +18,7 @@ public class OptionalCourseDocumentUI : MonoBehaviour
 
         new DropdownController(root, fractions);
         new ListController(root, listItems);
+        new TooltipController(root);
     }
 
     private void InitializeBadges()
