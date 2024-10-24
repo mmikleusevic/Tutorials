@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -27,6 +28,13 @@ public class UI : MonoBehaviour
         answerIndicator = root.Q<Label>("answerIndicator");
         highscoreLabel = root.Q<Label>("highscore");
         currentScoreLabel = root.Q<Label>("myScore");
+
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        nextHintButton.clicked += () => controller.HandleWrongAnswer();
     }
 
     public void SetHint(string hint)
