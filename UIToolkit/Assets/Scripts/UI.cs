@@ -1,4 +1,6 @@
 using Assets.Scripts;
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -40,6 +42,26 @@ public class UI : MonoBehaviour
         Setup.InitializeIcons(root, controller.GetAllQuestions());
     }
 
+    public void GiveAnswerFeedback(bool correct)
+    {
+        answerIndicator.style.visibility = Visibility.Visible;
+        StyleColor collorCorrect = new StyleColor(new Color32(0, 132, 19, 255));
+        StyleColor collorWrong = new StyleColor(new Color32(132, 0, 19, 255));
+
+        if (correct)
+        {
+            answerIndicator.text = "Your answer was correct";
+            answerIndicator.style.color = collorCorrect;
+        }
+        else
+        {
+            answerIndicator.text = "Your answer was wrong";
+            answerIndicator.style.color = collorWrong;
+        }
+
+        StartCoroutine(CleanUpQuestion());
+    }
+
     public void SetHint(string hint)
     {
         this.hint.text = hint;
@@ -53,5 +75,18 @@ public class UI : MonoBehaviour
     public void SetQuestionNumber(int questionNumber)
     {
         questionNumberLabel.text = "Question " + questionNumber;
+    }
+
+    private IEnumerator CleanUpQuestion()
+    {
+        yield return new WaitForSeconds(2f);
+        answerIndicator.style.visibility = Visibility.Hidden;
+
+        VisualElement dropZone = root.Q<VisualElement>("dropBox");
+
+        if (dropZone.childCount > 0)
+        {
+            dropZone.RemoveAt(0);
+        }
     }
 }

@@ -43,6 +43,8 @@ public class Controller : MonoBehaviour
             HandleWrongAnswer();
             Debug.Log("Answer was wrong!");
         }
+
+        ui.GiveAnswerFeedback(answerCorrect);
     }
 
     public void UpdateUI()

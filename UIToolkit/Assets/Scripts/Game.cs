@@ -42,8 +42,8 @@ public class Game : MonoBehaviour
     {
         currentQuestion = questions[++questionIndex];
 
-        currentHint = string.Empty;
         hintIndex = 0;
+        currentHint = currentQuestion.GetHints()[hintIndex];
     }
 
     public Question GetCurrentQuestion()
