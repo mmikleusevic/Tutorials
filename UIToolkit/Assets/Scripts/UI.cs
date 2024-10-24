@@ -37,7 +37,8 @@ public class UI : MonoBehaviour
     {
         nextHintButton.clicked += () => controller.HandleWrongAnswer();
 
-        Setup.Initialize(root);
+        Setup.InitializeDragDrop(root);
+        Setup.InitializeIcons(root, controller.GetAllQuestions());
     }
 
     public void SetHint(string hint)

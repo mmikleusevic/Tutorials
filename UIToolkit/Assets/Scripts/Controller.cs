@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Controller : MonoBehaviour
@@ -33,5 +34,10 @@ public class Controller : MonoBehaviour
         ui.SetHint(game.GetCurrentHint());
         ui.SetHintNumber(game.GetCurrentHintNumber());
         ui.SetQuestionNumber(game.GetCurrentQuestionNumber());
+    }
+
+    public List<Question> GetAllQuestions()
+    {
+        return game.questions;
     }
 }
