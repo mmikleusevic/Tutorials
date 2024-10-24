@@ -1,10 +1,19 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="mainContainer" style="flex-grow: 1;">
-        <ui:VisualElement name="upperContainer" style="flex-grow: 0; flex-basis: 20%; height: auto;" />
-        <ui:VisualElement name="middleContainer" style="flex-grow: 0; flex-basis: 15%;" />
+    <ui:VisualElement name="mainContainer" style="flex-grow: 1; background-image: resource(&apos;Images/BackgroundProject&apos;); flex-direction: column;">
+        <ui:VisualElement name="upperContainer" style="flex-grow: 0; flex-basis: 20%; height: auto; flex-direction: row; justify-content: space-between; align-items: center;">
+            <ui:VisualElement name="separatorLeft" style="flex-grow: 0; flex-direction: row; width: 25%; height: 10px; background-color: rgb(0, 0, 0);" />
+            <ui:Label tabindex="-1" text="Quizzy Icons" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-items: stretch; justify-content: space-around; flex-direction: column; align-self: auto; font-size: 120px; color: rgb(0, 0, 0); -unity-text-align: middle-left;" />
+            <ui:VisualElement name="separatorRight" style="flex-grow: 0; width: 25%; height: 10px; background-color: rgb(0, 0, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="middleContainer" style="flex-grow: 0; flex-basis: 15%; flex-direction: row; justify-content: center; align-items: center;">
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: space-around;">
+                <ui:Label tabindex="-1" text="Question 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="questionCounter" style="font-size: 80px; -unity-font-style: bold;" />
+                <ui:Label tabindex="-1" text="Your answer was correct" parse-escape-sequences="true" display-tooltip-when-elided="true" name="answerIndicator" style="font-size: 40px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="lowerContainer" style="flex-grow: 1; flex-direction: row;">
-            <ui:VisualElement name="iconContainer" style="flex-grow: 0; flex-basis: 100%; align-items: center; justify-content: flex-start;">
-                <ui:VisualElement name="scores" style="flex-grow: 0; width: 70%;" />
+            <ui:VisualElement name="iconContainer" style="flex-grow: 0; flex-basis: 100%; align-items: center; justify-content: center;">
+                <ui:VisualElement name="scores" style="flex-grow: 0; width: 70%; height: 0;" />
                 <ui:VisualElement name="iconBoard" style="flex-grow: 0; width: 70%; height: 70%;" />
             </ui:VisualElement>
             <ui:VisualElement name="answerContainer" style="flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-basis: 100%; align-items: center; justify-content: center;">
