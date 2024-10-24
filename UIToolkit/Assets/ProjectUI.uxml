@@ -13,15 +13,27 @@
         </ui:VisualElement>
         <ui:VisualElement name="lowerContainer" style="flex-grow: 1; flex-direction: row;">
             <ui:VisualElement name="iconContainer" style="flex-grow: 0; flex-basis: 100%; align-items: center; justify-content: center;">
-                <ui:VisualElement name="scores" style="flex-grow: 0; width: 70%; height: 0;" />
-                <ui:VisualElement name="iconBoard" style="flex-grow: 0; width: 70%; height: 70%;" />
+                <ui:VisualElement name="scores" style="flex-grow: 0; width: 70%; height: auto;">
+                    <ui:Label tabindex="-1" text="Score 123" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 30px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="iconBoard" style="flex-grow: 0; width: 70%; height: 70%; border-top-width: 20px; border-right-width: 20px; border-bottom-width: 20px; border-left-width: 20px; border-left-color: rgb(101, 101, 101); border-right-color: rgb(101, 101, 101); border-top-color: rgb(101, 101, 101); border-bottom-color: rgb(101, 101, 101); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;" />
             </ui:VisualElement>
             <ui:VisualElement name="answerContainer" style="flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-basis: 100%; align-items: center; justify-content: center;">
                 <ui:VisualElement name="answerBoard" style="flex-grow: 0; width: 70%; height: 70%;">
-                    <ui:VisualElement name="timeBar" style="flex-grow: 0; flex-basis: 10%;" />
-                    <ui:VisualElement name="hintBar" style="flex-grow: 0; flex-basis: 10%;" />
-                    <ui:VisualElement name="questionText" style="flex-grow: 0; flex-basis: 30%;" />
-                    <ui:VisualElement name="dropContainer" style="flex-grow: 0; flex-basis: 50%;" />
+                    <ui:VisualElement name="timeBar" style="flex-grow: 0; flex-basis: 10%;">
+                        <ui:Label tabindex="-1" text="30 sec" parse-escape-sequences="true" display-tooltip-when-elided="true" name="counterLabel" style="font-size: 35px; -unity-font-style: bold; color: rgb(219, 9, 9);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="hintBar" style="flex-grow: 0; flex-basis: 10%; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Hint 1:&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="hintNum" style="font-size: 35px; flex-grow: 1;" />
+                        <ui:Button text="NEXT HINT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="nextHintButton" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 25px; padding-right: 10px; padding-bottom: 4px; padding-left: 10px; padding-top: 4px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="questionText" style="flex-grow: 0; flex-basis: 30%;">
+                        <ui:Label tabindex="-1" text="Stupid little Start Text" parse-escape-sequences="true" display-tooltip-when-elided="true" name="hint" style="font-size: 40px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="dropContainer" style="flex-grow: 0; flex-basis: 50%; align-items: center; justify-content: space-around; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px;">
+                        <ui:VisualElement style="flex-grow: 0; width: 35%; height: 60%; background-color: rgb(200, 29, 29); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;" />
+                        <ui:Label tabindex="-1" text="Stupid little Start Text" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 38px;" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
