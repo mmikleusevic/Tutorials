@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -35,6 +36,8 @@ public class UI : MonoBehaviour
     public void Initialize()
     {
         nextHintButton.clicked += () => controller.HandleWrongAnswer();
+
+        Setup.Initialize(root);
     }
 
     public void SetHint(string hint)
