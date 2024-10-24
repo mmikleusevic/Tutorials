@@ -14,7 +14,8 @@
         <ui:VisualElement name="lowerContainer" style="flex-grow: 1; flex-direction: row;">
             <ui:VisualElement name="iconContainer" style="flex-grow: 0; flex-basis: 100%; align-items: center; justify-content: center;">
                 <ui:VisualElement name="scores" style="flex-grow: 0; width: 70%; height: auto;">
-                    <ui:Label tabindex="-1" text="Score 123" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/AlumniSans-VariableFont_wght%20SDF.asset?fileID=11400000&amp;guid=e3e4ebfe446f4484b9b697740b63a988&amp;type=2#AlumniSans-VariableFont_wght SDF&quot;); -unity-font-style: bold;" />
+                    <ui:Label tabindex="-1" text="Highscore: 123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="highscore" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/AlumniSans-VariableFont_wght%20SDF.asset?fileID=11400000&amp;guid=e3e4ebfe446f4484b9b697740b63a988&amp;type=2#AlumniSans-VariableFont_wght SDF&quot;); -unity-font-style: bold;" />
+                    <ui:Label tabindex="-1" text="Score: 123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="myScore" style="font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/AlumniSans-VariableFont_wght%20SDF.asset?fileID=11400000&amp;guid=e3e4ebfe446f4484b9b697740b63a988&amp;type=2#AlumniSans-VariableFont_wght SDF&quot;); -unity-font-style: bold;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="iconBoard" style="flex-grow: 0; width: 70%; height: 70%; border-top-width: 20px; border-right-width: 20px; border-bottom-width: 20px; border-left-width: 20px; border-left-color: rgb(101, 101, 101); border-right-color: rgb(101, 101, 101); border-top-color: rgb(101, 101, 101); border-bottom-color: rgb(101, 101, 101); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;">
                     <ui:VisualElement style="flex-grow: 0; width: 64px; height: 64px; background-image: resource(&apos;Images/Arc&apos;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 100px; left: 20px;" />
@@ -27,7 +28,6 @@
                     <ui:VisualElement style="flex-grow: 0; width: 64px; height: 64px; background-image: resource(&apos;Images/Arc&apos;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 48px; left: 424px;" />
                     <ui:VisualElement style="flex-grow: 0; width: 64px; height: 64px; background-image: resource(&apos;Images/Arc&apos;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 174px; left: 532px;" />
                     <ui:VisualElement style="flex-grow: 0; width: 64px; height: 64px; background-image: resource(&apos;Images/Arc&apos;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 10px; left: 562px;" />
-                    <ui:VisualElement name="testIcon" style="flex-grow: 0; width: 64px; height: 64px; background-image: resource(&apos;Images/Arc&apos;); -unity-background-scale-mode: scale-to-fit; position: absolute; top: 8px; left: 16px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="answerContainer" style="flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-basis: 100%; align-items: center; justify-content: center;">
