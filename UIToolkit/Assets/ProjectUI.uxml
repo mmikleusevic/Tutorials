@@ -49,4 +49,5 @@
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement name="dragArea" style="flex-grow: 1; position: absolute; display: none;" />
 </ui:UXML>
