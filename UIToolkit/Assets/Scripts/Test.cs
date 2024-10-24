@@ -9,6 +9,6 @@ public class Test : MonoBehaviour
 
         VisualElement icon = root.Q("testIcon");
 
-        icon.AddManipulator(new IconDragger(root));
+        icon.AddManipulator(new IconDragger(root, null));
     }
 }

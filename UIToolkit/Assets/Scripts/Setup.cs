@@ -6,12 +6,12 @@ namespace Assets.Scripts
 {
     public class Setup
     {
-        public static void InitializeDragDrop(VisualElement root)
+        public static void InitializeDragDrop(VisualElement root, Controller controller)
         {
             root.Query<VisualElement>("iconBoard")
                 .Children<VisualElement>().ForEach(child =>
                 {
-                    child.AddManipulator(new IconDragger(root));
+                    child.AddManipulator(new IconDragger(root, controller));
                 });
         }
 

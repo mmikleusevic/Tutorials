@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 public class EpochCarousel : VisualElement
@@ -73,7 +70,7 @@ public class EpochCarousel : VisualElement
         scrollView.AddToClassList(ussScrollView);
         scrollView.contentContainer.parent.AddToClassList(ussScrollContainer);
         scrollView.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
-        
+
         Button leftButton = new Button();
         Button rightButton = new Button();
         leftButton.AddToClassList(ussButton);

@@ -12,6 +12,6 @@ public class ColorPanel : VisualElement
         panel.style.height = 200;
         panel.style.backgroundColor = Color.cyan;
 
-        hierarchy.Add(panel);   
+        hierarchy.Add(panel);
     }
 }

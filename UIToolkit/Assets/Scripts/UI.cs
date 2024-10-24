@@ -1,5 +1,4 @@
 using Assets.Scripts;
-using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -37,7 +36,7 @@ public class UI : MonoBehaviour
     {
         nextHintButton.clicked += () => controller.HandleWrongAnswer();
 
-        Setup.InitializeDragDrop(root);
+        Setup.InitializeDragDrop(root, controller);
         Setup.InitializeIcons(root, controller.GetAllQuestions());
     }
 

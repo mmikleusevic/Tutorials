@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,14 +18,13 @@ public class Game : MonoBehaviour
 
     public bool IsAnswerCorrect(string answer)
     {
-        return currentQuestion.answer == answer;    
+        return currentQuestion.answer == answer;
     }
 
     public void HandleCorrectAnswer()
     {
         NextQuestion();
     }
-
 
     public void HandleWrongAnswer()
     {

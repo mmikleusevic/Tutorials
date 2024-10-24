@@ -3,6 +3,8 @@ using UnityEngine.UIElements;
 
 public class IconDragger : MouseManipulator
 {
+    private Controller controller;
+
     private VisualElement dragArea;
     private VisualElement iconContainer;
     private VisualElement dropZone;
@@ -13,8 +15,10 @@ public class IconDragger : MouseManipulator
 
     private bool isActive;
 
-    public IconDragger(VisualElement root)
+    public IconDragger(VisualElement root, Controller controller)
     {
+        this.controller = controller;
+
         dragArea = root.Q<VisualElement>("dragArea");
         dropZone = root.Q<VisualElement>("dropBox");
 
@@ -77,6 +81,10 @@ public class IconDragger : MouseManipulator
 
             target.style.left = dropZone.contentRect.center.x - target.layout.width / 2;
             target.style.top = dropZone.contentRect.center.y - target.layout.height / 2;
+
+            Debug.Log("The provided answer is: " + ((Question)target.userData).displayAnswer);
+
+            controller.CheckAnswer(((Question)target.userData).answer);
         }
         else
         {
@@ -84,7 +92,7 @@ public class IconDragger : MouseManipulator
 
             target.style.left = elememEndPosLocal.x - iconContainer.contentRect.position.x;
             target.style.top = elememEndPosLocal.y - iconContainer.contentRect.position.y;
-        }        
+        }
 
         isActive = false;
         target.ReleaseMouse();

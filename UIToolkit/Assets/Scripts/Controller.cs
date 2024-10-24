@@ -29,6 +29,22 @@ public class Controller : MonoBehaviour
         UpdateUI();
     }
 
+    public void CheckAnswer(string answer)
+    {
+        bool answerCorrect = game.IsAnswerCorrect(answer);
+
+        if (answerCorrect)
+        {
+            HandleCorrectAnswer();
+            Debug.Log("Answer was correct!");
+        }
+        else
+        {
+            HandleWrongAnswer();
+            Debug.Log("Answer was wrong!");
+        }
+    }
+
     public void UpdateUI()
     {
         ui.SetHint(game.GetCurrentHint());
