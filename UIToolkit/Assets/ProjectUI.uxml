@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="mainContainer" style="flex-grow: 1;">
+        <ui:VisualElement name="upperContainer" style="flex-grow: 0; flex-basis: 20%; height: auto;" />
+        <ui:VisualElement name="middleContainer" style="flex-grow: 0; flex-basis: 15%;" />
+        <ui:VisualElement name="lowerContainer" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="iconContainer" style="flex-grow: 0; flex-basis: 100%; align-items: center; justify-content: flex-start;">
+                <ui:VisualElement name="scores" style="flex-grow: 0; width: 70%;" />
+                <ui:VisualElement name="iconBoard" style="flex-grow: 0; width: 70%; height: 70%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="answerContainer" style="flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-basis: 100%; align-items: center; justify-content: center;">
+                <ui:VisualElement name="answerBoard" style="flex-grow: 0; width: 70%; height: 70%;">
+                    <ui:VisualElement name="timeBar" style="flex-grow: 0; flex-basis: 10%;" />
+                    <ui:VisualElement name="hintBar" style="flex-grow: 0; flex-basis: 10%;" />
+                    <ui:VisualElement name="questionText" style="flex-grow: 0; flex-basis: 30%;" />
+                    <ui:VisualElement name="dropContainer" style="flex-grow: 0; flex-basis: 50%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
