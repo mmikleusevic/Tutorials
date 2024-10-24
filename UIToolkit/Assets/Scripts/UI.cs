@@ -3,7 +3,8 @@ using UnityEngine.UIElements;
 
 public class UI : MonoBehaviour
 {
-    private Controller controller;
+    [SerializeField] private Controller controller;
+
     private VisualElement root;
     private Label hint;
     private Label hintNumberLabel;

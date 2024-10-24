@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public Game game;
-    public UI ui;
+    [SerializeField] private Game game;
+    [SerializeField] private UI ui;
+
+    private void Start()
+    {
+        Initialize();
+    }
 
     public void Initialize()
     {
