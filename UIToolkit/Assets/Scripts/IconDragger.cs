@@ -16,7 +16,7 @@ public class IconDragger : MouseManipulator
     public IconDragger(VisualElement root)
     {
         dragArea = root.Q<VisualElement>("dragArea");
-        dropZone = root.Q<VisualElement>("dropZone");
+        dropZone = root.Q<VisualElement>("dropBox");
 
         isActive = false;
     }
@@ -71,10 +71,20 @@ public class IconDragger : MouseManipulator
     {
         if (!isActive || !target.HasMouseCapture()) return;
 
-        iconContainer.Add(target);
+        if (target.worldBound.Overlaps(dropZone.worldBound))
+        {
+            dropZone.Add(target);
 
-        target.style.left = elememEndPosLocal.x - iconContainer.contentRect.position.x;
-        target.style.top = elememEndPosLocal.y - iconContainer.contentRect.position.y;
+            target.style.left = dropZone.contentRect.center.x - target.layout.width / 2;
+            target.style.top = dropZone.contentRect.center.y - target.layout.height / 2;
+        }
+        else
+        {
+            iconContainer.Add(target);
+
+            target.style.left = elememEndPosLocal.x - iconContainer.contentRect.position.x;
+            target.style.top = elememEndPosLocal.y - iconContainer.contentRect.position.y;
+        }        
 
         isActive = false;
         target.ReleaseMouse();
