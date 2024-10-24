@@ -6,7 +6,7 @@ public class Question : ScriptableObject
     public string answer;
     public string displayAnswer;
 
-    public string[] hints;
+    public string[] hints = new string[3];
 
     public string[] GetHints()
     {
