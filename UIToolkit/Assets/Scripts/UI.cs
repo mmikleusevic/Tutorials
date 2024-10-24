@@ -89,4 +89,9 @@ public class UI : MonoBehaviour
             dropZone.RemoveAt(0);
         }
     }
+
+    public void SetTimer(int seconds)
+    {
+        timeLabel.text = "Time remaining: " + seconds + " seconds";
+    }
 }
