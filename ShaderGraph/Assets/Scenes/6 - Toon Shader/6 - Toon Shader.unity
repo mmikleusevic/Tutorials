@@ -2481,6 +2481,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2026771942
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7249093
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.725
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.104
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_Name
+      value: Quandtum_BA-2_v1_1 Smoothed Faces
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862756558373513611, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862756558373513611, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e14edd4ff6e5a7147845905ce53555f3, type: 2}
+    - target: {fileID: 2862756558373513611, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: abf78e0fc411b7a4d9812b7c7c5749c2, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4fe3a0721e7bc9e42a45dfcad44bbdb8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2509,3 +2578,4 @@ SceneRoots:
   - {fileID: 254975879}
   - {fileID: 1254152127}
   - {fileID: 2006639645}
+  - {fileID: 2026771942}
