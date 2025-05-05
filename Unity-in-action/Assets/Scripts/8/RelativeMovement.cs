@@ -11,6 +11,7 @@ public class RelativeMovement : MonoBehaviour
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float terminalVelocity = -10.0f;
     [SerializeField] private float minFall = -1.5f;
+    [SerializeField] private float pushForce = 3.0f;
 
     private CharacterController charController;
     private ControllerColliderHit contact;
@@ -44,7 +45,7 @@ public class RelativeMovement : MonoBehaviour
             Quaternion direction = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Lerp(transform.rotation, direction, rotSpeed * Time.deltaTime);
         }
-        
+
         bool hitGround = false;
         RaycastHit hit;
         if (vertSpeed < 0 &&
@@ -53,9 +54,9 @@ public class RelativeMovement : MonoBehaviour
             float check = (charController.height + charController.radius) / 1.9f;
             hitGround = hit.distance <= check;
         }
-        
+
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        
+
         if (hitGround)
         {
             if (Input.GetButtonDown("Jump"))
@@ -103,5 +104,11 @@ public class RelativeMovement : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         contact = hit;
+
+        Rigidbody body = hit.collider.attachedRigidbody;
+        if (body != null && !body.isKinematic)
+        {
+            body.linearVelocity = hit.moveDirection * pushForce;
+        }
     }
 }
