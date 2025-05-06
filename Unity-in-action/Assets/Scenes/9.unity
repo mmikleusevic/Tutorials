@@ -877,6 +877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 1603564676}
+  requireKey: 1
 --- !u!1 &354639250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,6 +2926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 1603564676}
+  requireKey: 0
 --- !u!1 &1862259391
 GameObject:
   m_ObjectHideFlags: 0
