@@ -1,4 +1,5 @@
 using System;
+using _12;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
@@ -13,6 +14,6 @@ public class PlayerCharacter : MonoBehaviour
     public void Hurt(int damage)
     {
         health -= damage;
-        Debug.Log($"Health: {health}");
+        Managers.Player.ChangeHealth(-damage);
     }
 }

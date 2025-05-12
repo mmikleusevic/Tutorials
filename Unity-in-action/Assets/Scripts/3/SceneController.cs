@@ -5,8 +5,8 @@ using Random = UnityEngine.Random;
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
-
-    private float value;
+    [SerializeField] private float value;
+    
     private GameObject enemy;
 
     private void OnEnable()
@@ -25,7 +25,7 @@ public class SceneController : MonoBehaviour
         {
             enemy = Instantiate(enemyPrefab);
             
-            enemy.transform.position = new Vector3(0, 1, 0);
+            enemy.transform.position = new Vector3(-2, 1, 0);
             float angle = Random.Range(0, 360);
             enemy.transform.Rotate(0, angle, 0);
 
